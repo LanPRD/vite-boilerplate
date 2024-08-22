@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --950: theme("colors.neutral.50");
+    --900: theme("colors.neutral.100");
+    --800: theme("colors.neutral.200");
+    --700: theme("colors.neutral.300");
+    --600: theme("colors.neutral.400");
+    --500: theme("colors.neutral.500");
+    --400: theme("colors.neutral.600");
+    --300: theme("colors.neutral.700");
+    --200: theme("colors.neutral.800");
+    --100: theme("colors.neutral.900");
+    --50: theme("colors.neutral.950");
+  }
+
+  .dark {
+    --950: theme("colors.neutral.950");
+    --900: theme("colors.neutral.900");
+    --800: theme("colors.neutral.800");
+    --700: theme("colors.neutral.700");
+    --600: theme("colors.neutral.600");
+    --500: theme("colors.neutral.500");
+    --400: theme("colors.neutral.400");
+    --300: theme("colors.neutral.300");
+    --200: theme("colors.neutral.200");
+    --100: theme("colors.neutral.100");
+    --50: theme("colors.neutral.50");
+  }
+}
+
+@layer base {
+  body {
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* ::-webkit-scrollbar-track {
+    background: #373737;
+    border-radius: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-icon;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    @apply bg-icon;
+  } */
+}
