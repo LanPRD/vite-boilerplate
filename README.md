@@ -32,6 +32,8 @@ Este boilerplate vem com uma série de bibliotecas e configurações pré-defini
 
 ### Tecnologias Utilizadas
 
+Principais bibliotecas utilizadas para criar o boilerplate.
+
 - **Tailwind CSS**: Para estilização rápida e eficiente.
 - **React Router DOM**: Para gerenciamento de rotas.
 - **Zustand**: Para gerenciamento de estado.
@@ -45,6 +47,16 @@ Este boilerplate vem com uma série de bibliotecas e configurações pré-defini
 - **Fbemitter**: Para gerenciamento de eventos.
 - **React Icons**: Conjunto de ícones para React.
 - **Tailwind Merge**: Para mesclar classes do Tailwind.
+- **@axe-core/react**: Para acessibilidade, integrando a biblioteca `axe-core` com React.
+- **AWS SDK**: Biblioteca AWS para interações com serviços da Amazon.
+- **ESLint**: Ferramenta de linting para JavaScript/TypeScript.
+- **eslint-plugin-jsx-a11y**: Plugin ESLint para acessibilidade em JSX.
+- **Rollup Plugin Analyzer**: Plugin para análise do bundle Rollup.
+- **s3-deploy**: Ferramenta para deploy de arquivos em buckets S3 da Amazon.
+- **Terser**: Minificador JavaScript para produção.
+- **TypeScript**: Suporte a tipagem estática para JavaScript.
+- **vite-plugin-compression**: Plugin Vite para compressão de arquivos.
+- **vite-plugin-svgr**: Plugin Vite para importar SVGs como componentes React.
 
 <br />
 
@@ -57,7 +69,7 @@ Siga os passos abaixo para começar a usar o boilerplate:
 1. Crie um novo projeto utilizando este boilerplate como template:
 
    ```bash
-   npm create vite@latest my-project -- --template git+https://github.com/LanPRD/vite-boilerplate.git
+   npx degit LanPRD/vite-boilerplate my-project
    ```
 
 2. Navegue até o diretório do projeto:
