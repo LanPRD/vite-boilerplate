@@ -14,7 +14,6 @@
 
 <p align="center">
   <img alt="npm" src="https://img.shields.io/npm/v/vite">
-  <img alt='size' src='https://img.shields.io/bundlephobia/minzip/vite-boilerplate?color=success&label=size' />
 </p>
 
 <h3 align="center">
@@ -95,6 +94,6 @@ Você pode começar a construir suas páginas e componentes utilizando os exempl
 
 <!-- CONTACT -->
 
-## 🌐 Portfólio
+## 🌐 Links
 
 - [Portfólio](https://portfolio.prdev.com.br/)
