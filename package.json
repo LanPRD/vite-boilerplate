@@ -27,7 +27,6 @@
     "react-hook-form": "^7.53.0",
     "react-icons": "^5.3.0",
     "react-router-dom": "^6.26.2",
-    "remove": "^0.1.5",
     "tailwind-merge": "^2.5.2",
     "zod": "^3.23.8",
     "zustand": "^5.0.0-rc.2"
@@ -36,8 +35,8 @@
     "@axe-core/react": "^4.10.0",
     "@prdev-solutions/eslint-config": "^1.0.5",
     "@types/fbemitter": "^2.0.35",
-    "@types/node": "^22.5.5",
-    "@types/react": "^18.3.8",
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
@@ -47,10 +46,10 @@
     "postcss": "^8.4.47",
     "rollup-plugin-analyzer": "^4.0.0",
     "s3-deploy": "^1.4.0",
-    "tailwindcss": "^3.4.12",
-    "terser": "^5.33.0",
+    "tailwindcss": "^3.4.13",
+    "terser": "^5.34.1",
     "typescript": "^5.6.2",
-    "vite": "^5.4.7",
+    "vite": "^5.4.8",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-svgr": "^4.2.0"
   }
