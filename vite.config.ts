@@ -12,13 +12,18 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
+      svgr({ include: "**/*.svg?react", exclude: "", svgrOptions: {} }),
       viteCompression({ algorithm: "gzip", deleteOriginFile: true }),
-      analyzer({ summaryOnly: true }),
-      svgr({ include: "**/*.svg?react", exclude: "", svgrOptions: {} })
+      analyzer({
+        filter: module => {
+          return module.percent > 0.5; // Apenas exibe módulos que foram otimizados
+        },
+        summaryOnly: true
+      }),
     ],
     build: {
       sourcemap: env.VITE_BASE_STAGE === "prod" ? false : false,
-      minify: "terser",
+      minify: "esbuild",
       chunkSizeWarningLimit: 500,
       rollupOptions: {
         output: {

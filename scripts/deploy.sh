@@ -2,7 +2,7 @@
 
 # Função para exibir a ajuda do script
 function show_help {
-  echo "Usage: $0 [prod|dev]"
+  echo "Usage: $0 [prod | dev]"
   exit 1
 }
 
@@ -20,11 +20,13 @@ case "$ENV" in
     BUCKET="prod.luckysea.io"
     BUILD_COMMAND="npm run build:prod"
     INVALIDATE_COMMAND="node scripts/invalidate.js prod"
+    REGION="us-east-1"
     ;;
   dev)
     BUCKET="dev.luckysea.io"
     BUILD_COMMAND="npm run build"
     INVALIDATE_COMMAND=""
+    REGION="us-east-1"
     ;;
   *)
     show_help
@@ -35,8 +37,7 @@ esac
 $BUILD_COMMAND
 
 # Remover diretórios desnecessários
-rm -rf dist/assets/banners
-rm -rf dist/assets/partners
+# rm -rf dist/assets/example
 
 # Caminho do diretório de saída
 DIST_DIR="./dist"
@@ -57,7 +58,7 @@ find "$DIST_DIR" -type f -name "*.br" -exec bash -c '
 ' bash {} "$TEMP_DIR" \;
 
 # Fazer upload de todos os arquivos usando s3-deploy
-npx s3-deploy './dist/**' --cwd './dist/' --region us-east-1 --bucket $BUCKET
+npx s3-deploy './dist/**' --cwd './dist/' --region $REGION --bucket $BUCKET
 
 # Mover arquivos Gzip de volta para o diretório de saída, mantendo a estrutura de diretórios
 find "$TEMP_DIR" -type f -exec bash -c '
@@ -82,15 +83,15 @@ upload_gzip_files_with_headers() {
     aws s3 cp "$file" "s3://$BUCKET/$s3_path" \
       --content-encoding gzip \
       --content-type "$content_type" \
-      --region us-east-1
+      --region $REGION
   done
 }
 
 # Fazer upload dos arquivos Gzip para o S3 com cabeçalhos corretos
-upload_gzip_files_with_headers "js" "application/javascript"
 upload_gzip_files_with_headers "css" "text/css"
 upload_gzip_files_with_headers "html" "text/html"
 upload_gzip_files_with_headers "json" "application/json"
+upload_gzip_files_with_headers "js" "application/javascript"
 
 # Invalidar o cache se for necessário
 if [ -n "$INVALIDATE_COMMAND" ]; then

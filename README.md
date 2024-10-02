@@ -53,7 +53,6 @@ Principais bibliotecas utilizadas para criar o boilerplate.
 - **eslint-plugin-jsx-a11y**: Plugin ESLint para acessibilidade em JSX.
 - **Rollup Plugin Analyzer**: Plugin para análise do bundle Rollup.
 - **s3-deploy**: Ferramenta para deploy de arquivos em buckets S3 da Amazon.
-- **Terser**: Minificador JavaScript para produção.
 - **TypeScript**: Suporte a tipagem estática para JavaScript.
 - **vite-plugin-compression**: Plugin Vite para compressão de arquivos.
 - **vite-plugin-svgr**: Plugin Vite para importar SVGs como componentes React.
