@@ -56,6 +56,7 @@ Principais bibliotecas utilizadas para criar o boilerplate.
 - **TypeScript**: Suporte a tipagem estática para JavaScript.
 - **vite-plugin-compression**: Plugin Vite para compressão de arquivos.
 - **vite-plugin-svgr**: Plugin Vite para importar SVGs como componentes React.
+- **Commitizen**: Ferramenta para padronização de commits.
 
 <br />
 
