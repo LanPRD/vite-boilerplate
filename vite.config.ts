@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
           return module.percent > 0.5; // Apenas exibe módulos que foram otimizados
         },
         summaryOnly: true
-      }),
+      })
     ],
     build: {
       sourcemap: env.VITE_BASE_STAGE === "prod" ? false : false,
