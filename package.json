@@ -10,7 +10,9 @@
     "build:prod": "tsc && vite build --mode production",
     "deploy:dev": "scripts/second-deploy.sh dev",
     "deploy:prod": "scripts/second-deploy.sh prod",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "prettier:check": "npx prettier --check .",
+    "prettier:fix": "npx prettier --write .",
     "preview": "vite preview",
     "prod": "vite --mode production",
     "commit": "cz"

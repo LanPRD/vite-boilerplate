@@ -4,6 +4,7 @@ export async function axeAccessibilityReporter() {
     const React = await import("react").then(mod => mod.default);
     const ReactDOM = await import("react-dom").then(mod => mod.default);
 
-    axe(React, ReactDOM, 1000);
+    const timeout = 1000;
+    axe(React, ReactDOM, timeout);
   }
 }
