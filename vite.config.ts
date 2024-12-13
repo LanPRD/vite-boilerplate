@@ -8,12 +8,13 @@ import svgr from "vite-plugin-svgr";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
+  const isProd = env.VITE_BASE_STAGE === "prod";
 
   return {
     plugins: [
       react(),
       svgr({ include: "**/*.svg?react", exclude: "", svgrOptions: {} }),
-      viteCompression({ algorithm: "gzip", deleteOriginFile: true }),
+      isProd && viteCompression({ algorithm: "gzip", deleteOriginFile: true }),
       analyzer({
         filter: module => {
           return module.percent > 0.5; // Apenas exibe módulos que foram otimizados
@@ -22,7 +23,7 @@ export default defineConfig(({ mode }) => {
       })
     ],
     build: {
-      sourcemap: env.VITE_BASE_STAGE === "prod" ? false : false,
+      sourcemap: isProd ? false : true,
       minify: "esbuild",
       chunkSizeWarningLimit: 500,
       rollupOptions: {

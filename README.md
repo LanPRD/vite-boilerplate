@@ -1,8 +1,8 @@
+<h1 align="center">Vite-Boilerplate</h1>
+
 <p align="center">
   <img src="https://vitejs.dev/logo.svg" alt="Vite Logo" width="80" height="80">
 </p>
-
-<h1 align="center">Vite-Boilerplate</h1>
 
 <p align="center">
   🚀 Um boilerplate para projetos React utilizando Vite, configurado com as melhores práticas para acelerar seu desenvolvimento.
@@ -108,6 +108,7 @@ Você pode começar a construir suas páginas e componentes utilizando os exempl
 ## 🌐 Links
 
 <p align="center">
-  <a href="https://portfolio.prdev.com.br/"><img src="https://img.shields.io/badge/Portfolio-255E63?style=for-the-badge&logo=About.me&logoColor=white" /></a>&nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/lanprd/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://portfolio.prdev.com.br/"><img src="https://img.shields.io/badge/Portfolio-255E63?style=for-the-badge&logo=About.me&logoColor=white" alt='Portfolio Allan Prado' /></a>&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/in/lanprd/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt
+="LinkedIn Allan Prado" /></a>
 </p>
