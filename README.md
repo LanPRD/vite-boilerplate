@@ -44,7 +44,6 @@ Principais bibliotecas utilizadas para criar o boilerplate.
 - **Tanstack React Query**: Para gerenciamento de dados assíncronos.
 - **Clsx**: Para manipulação condicional de classes.
 - **Date-fns**: Para manipulação de datas.
-- **Fbemitter**: Para gerenciamento de eventos.
 - **React Icons**: Conjunto de ícones para React.
 - **Tailwind Merge**: Para mesclar classes do Tailwind.
 - **@axe-core/react**: Para acessibilidade, integrando a biblioteca `axe-core` com React.

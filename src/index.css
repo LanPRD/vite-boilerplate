@@ -4,37 +4,67 @@
 
 @layer base {
   :root {
-    --950: theme("colors.neutral.50");
-    --900: theme("colors.neutral.100");
-    --800: theme("colors.neutral.200");
-    --700: theme("colors.neutral.300");
-    --600: theme("colors.neutral.400");
-    --500: theme("colors.neutral.500");
-    --400: theme("colors.neutral.600");
-    --300: theme("colors.neutral.700");
-    --200: theme("colors.neutral.800");
-    --100: theme("colors.neutral.900");
-    --50: theme("colors.neutral.950");
+    --neutral-50: #f6f6f6;
+    --neutral-100: #e7e7e7;
+    --neutral-300: #b0b0b0;
+    --neutral-400: #888888;
+    --neutral-200: #d1d1d1;
+    --neutral-600: #5d5d5d;
+    --neutral-700: #4f4f4f;
+    --neutral-500: #737373;
+    --neutral-800: #454545;
+    --neutral-900: #3d3d3d;
+    --neutral-950: #262626;
+
+    --amaranth-50: #fff0f3;
+    --amaranth-100: #ffe2e9;
+    --amaranth-200: #ffcad8;
+    --amaranth-300: #ff9fb8;
+    --amaranth-400: #ff6993;
+    --amaranth-500: #ff2668;
+    --amaranth-600: #ed115e;
+    --amaranth-700: #c80851;
+    --amaranth-800: #a8094a;
+    --amaranth-900: #8f0c45;
+    --amaranth-950: #500121;
+
+    --amaranth-contrast: #ffffff;
+
+    --radius: 0.5rem;
   }
 
   .dark {
-    --950: theme("colors.neutral.950");
-    --900: theme("colors.neutral.900");
-    --800: theme("colors.neutral.800");
-    --700: theme("colors.neutral.700");
-    --600: theme("colors.neutral.600");
-    --500: theme("colors.neutral.500");
-    --400: theme("colors.neutral.400");
-    --300: theme("colors.neutral.300");
-    --200: theme("colors.neutral.200");
-    --100: theme("colors.neutral.100");
-    --50: theme("colors.neutral.50");
+    --neutral-50: #262626;
+    --neutral-100: #3d3d3d;
+    --neutral-200: #454545;
+    --neutral-300: #4f4f4f;
+    --neutral-400: #5d5d5d;
+    --neutral-500: #737373;
+    --neutral-600: #888888;
+    --neutral-700: #b0b0b0;
+    --neutral-800: #d1d1d1;
+    --neutral-900: #e7e7e7;
+    --neutral-950: #f6f6f6;
+
+    --amaranth-50: #500121;
+    --amaranth-100: #8f0c45;
+    --amaranth-200: #a8094a;
+    --amaranth-300: #c80851;
+    --amaranth-400: #ed115e;
+    --amaranth-500: #ff2668;
+    --amaranth-600: #ff6993;
+    --amaranth-700: #ff9fb8;
+    --amaranth-800: #ffcad8;
+    --amaranth-900: #ffe2e9;
+    --amaranth-950: #fff0f3;
   }
 }
 
 @layer base {
   body {
-    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    background: var(--neutral-50);
+    color: var(--neutral-900);
   }
 
   ::-webkit-scrollbar {
