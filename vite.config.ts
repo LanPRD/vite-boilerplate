@@ -1,3 +1,4 @@
+import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "node:path";
 import analyzer from "rollup-plugin-analyzer";
@@ -13,14 +14,15 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       react(),
+      tailwindcss(),
       svgr({ include: "**/*.svg?react", exclude: "", svgrOptions: {} }),
       isProd && viteCompression({ algorithm: "gzip", deleteOriginFile: true }),
       analyzer({
-        filter: module => {
+        filter: (module) => {
           return module.percent > 0.5; // Apenas exibe módulos que foram otimizados
         },
-        summaryOnly: true
-      })
+        summaryOnly: true,
+      }),
     ],
     build: {
       sourcemap: isProd ? false : true,
@@ -31,18 +33,27 @@ export default defineConfig(({ mode }) => {
           manualChunks(id) {
             if (id.includes("commonjsHelpers")) return "commonjsHelpers";
             if (id.includes("radix")) return "radix";
-            if (id.includes("zod") || id.includes("react-hook-form")) return "libs";
-            if (id.includes("react-router-dom") || id.includes("react-router") || id.includes("@remix-run"))
+            if (id.includes("zod") || id.includes("react-hook-form"))
+              return "libs";
+            if (
+              id.includes("react-router-dom") ||
+              id.includes("react-router") ||
+              id.includes("@remix-run")
+            )
               return "react-router";
-            if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/")) return "react";
-          }
-        }
-      }
+            if (
+              id.includes("node_modules/react/") ||
+              id.includes("node_modules/react-dom/")
+            )
+              return "react";
+          },
+        },
+      },
     },
     resolve: {
       alias: {
-        "@": path.resolve(__dirname, "./src")
-      }
-    }
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
   };
 });

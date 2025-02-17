@@ -1,91 +1,392 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(class *));
+
+@theme {
+  --color-*: initial;
+  --color-gray-1: var(--gray-1);
+  --color-gray-2: var(--gray-2);
+  --color-gray-3: var(--gray-3);
+  --color-gray-4: var(--gray-4);
+  --color-gray-5: var(--gray-5);
+  --color-gray-6: var(--gray-6);
+  --color-gray-7: var(--gray-7);
+  --color-gray-8: var(--gray-8);
+  --color-gray-9: var(--gray-9);
+  --color-gray-10: var(--gray-10);
+  --color-gray-11: var(--gray-11);
+  --color-gray-12: var(--gray-12);
+
+  --color-gray-a1: var(--gray-a1);
+  --color-gray-a2: var(--gray-a2);
+  --color-gray-a3: var(--gray-a3);
+  --color-gray-a4: var(--gray-a4);
+  --color-gray-a5: var(--gray-a5);
+  --color-gray-a6: var(--gray-a6);
+  --color-gray-a7: var(--gray-a7);
+  --color-gray-a8: var(--gray-a8);
+  --color-gray-a9: var(--gray-a9);
+  --color-gray-a10: var(--gray-a10);
+  --color-gray-a11: var(--gray-a11);
+  --color-gray-a12: var(--gray-a12);
+
+  --color-gray-contrast: var(--gray-contrast);
+  --color-gray-surface: var(--gray-surface);
+  --color-gray-indicator: var(--gray-indicator);
+  --color-gray-track: var(--gray-track);
+
+  --color-amaranth-1: var(--pink-1);
+  --color-amaranth-2: var(--pink-2);
+  --color-amaranth-3: var(--pink-3);
+  --color-amaranth-4: var(--pink-4);
+  --color-amaranth-5: var(--pink-5);
+  --color-amaranth-6: var(--pink-6);
+  --color-amaranth-7: var(--pink-7);
+  --color-amaranth-8: var(--pink-8);
+  --color-amaranth-9: var(--pink-9);
+  --color-amaranth-10: var(--pink-10);
+  --color-amaranth-11: var(--pink-11);
+  --color-amaranth-12: var(--pink-12);
+
+  --color-amaranth-a1: var(--pink-a1);
+  --color-amaranth-a2: var(--pink-a2);
+  --color-amaranth-a3: var(--pink-a3);
+  --color-amaranth-a4: var(--pink-a4);
+  --color-amaranth-a5: var(--pink-a5);
+  --color-amaranth-a6: var(--pink-a6);
+  --color-amaranth-a7: var(--pink-a7);
+  --color-amaranth-a8: var(--pink-a8);
+  --color-amaranth-a9: var(--pink-a9);
+  --color-amaranth-a10: var(--pink-a10);
+  --color-amaranth-a11: var(--pink-a11);
+  --color-amaranth-a12: var(--pink-a12);
+
+  --color-amaranth-contrast: var(--pink-contrast);
+  --color-amaranth-surface: var(--pink-surface);
+  --color-amaranth-indicator: var(--pink-indicator);
+  --color-amaranth-track: var(--pink-track);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
 @layer base {
-  :root {
-    --neutral-50: #f6f6f6;
-    --neutral-100: #e7e7e7;
-    --neutral-300: #b0b0b0;
-    --neutral-400: #888888;
-    --neutral-200: #d1d1d1;
-    --neutral-600: #5d5d5d;
-    --neutral-700: #4f4f4f;
-    --neutral-500: #737373;
-    --neutral-800: #454545;
-    --neutral-900: #3d3d3d;
-    --neutral-950: #262626;
-
-    --amaranth-50: #fff0f3;
-    --amaranth-100: #ffe2e9;
-    --amaranth-200: #ffcad8;
-    --amaranth-300: #ff9fb8;
-    --amaranth-400: #ff6993;
-    --amaranth-500: #ff2668;
-    --amaranth-600: #ed115e;
-    --amaranth-700: #c80851;
-    --amaranth-800: #a8094a;
-    --amaranth-900: #8f0c45;
-    --amaranth-950: #500121;
-
-    --amaranth-contrast: #ffffff;
-
-    --radius: 0.5rem;
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--gray-200, currentColor);
   }
+}
 
-  .dark {
-    --neutral-50: #262626;
-    --neutral-100: #3d3d3d;
-    --neutral-200: #454545;
-    --neutral-300: #4f4f4f;
-    --neutral-400: #5d5d5d;
-    --neutral-500: #737373;
-    --neutral-600: #888888;
-    --neutral-700: #b0b0b0;
-    --neutral-800: #d1d1d1;
-    --neutral-900: #e7e7e7;
-    --neutral-950: #f6f6f6;
+:root {
+  --radius: 0.5rem;
+}
 
-    --amaranth-50: #500121;
-    --amaranth-100: #8f0c45;
-    --amaranth-200: #a8094a;
-    --amaranth-300: #c80851;
-    --amaranth-400: #ed115e;
-    --amaranth-500: #ff2668;
-    --amaranth-600: #ff6993;
-    --amaranth-700: #ff9fb8;
-    --amaranth-800: #ffcad8;
-    --amaranth-900: #ffe2e9;
-    --amaranth-950: #fff0f3;
+:root,
+.light,
+.light-theme {
+  --pink-1: #fdf9f9;
+  --pink-2: #fdf3f4;
+  --pink-3: #ffe5e6;
+  --pink-4: #ffd5d8;
+  --pink-5: #ffc7ca;
+  --pink-6: #feb6bb;
+  --pink-7: #f7a1a8;
+  --pink-8: #ef858f;
+  --pink-9: #f80255;
+  --pink-10: #e90049;
+  --pink-11: #d10040;
+  --pink-12: #6f0020;
+
+  --pink-a1: #fff3f355;
+  --pink-a2: #ffe1e455;
+  --pink-a3: #ffe5e6;
+  --pink-a4: #ffd5d8;
+  --pink-a5: #ffc7ca;
+  --pink-a6: #ff939baa;
+  --pink-a7: #ef03165d;
+  --pink-a8: #e1021779;
+  --pink-a9: #f80054fd;
+  --pink-a10: #e90049;
+  --pink-a11: #d10040;
+  --pink-a12: #6f0020;
+
+  --pink-contrast: #fff;
+  --pink-surface: #fef1f3cc;
+  --pink-indicator: #f80255;
+  --pink-track: #f80255;
+
+  --gray-1: #f9f9fa;
+  --gray-2: #f5f6f8;
+  --gray-3: #ececf0;
+  --gray-4: #e3e4e8;
+  --gray-5: #dcdde2;
+  --gray-6: #d4d5dc;
+  --gray-7: #c8cad2;
+  --gray-8: #b4b6c2;
+  --gray-9: #878994;
+  --gray-10: #7c7e89;
+  --gray-11: #5e5f68;
+  --gray-12: #1e1f24;
+
+  --gray-a1: #3d3d7d04;
+  --gray-a2: #1d3d7d08;
+  --gray-a3: #0c0c4811;
+  --gray-a4: #0711381a;
+  --gray-a5: #050d3421;
+  --gray-a6: #040a3529;
+  --gray-a7: #020c3235;
+  --gray-a8: #01083249;
+  --gray-a9: #02061e77;
+  --gray-a10: #00041a82;
+  --gray-a11: #000210a0;
+  --gray-a12: #000107e1;
+
+  --gray-contrast: #ffffff;
+  --gray-surface: #ffffffcc;
+  --gray-indicator: #878994;
+  --gray-track: #878994;
+}
+
+.dark,
+.dark-theme {
+  --pink-1: #180e0f;
+  --pink-2: #201414;
+  --pink-3: #3f0e16;
+  --pink-4: #560319;
+  --pink-5: #680620;
+  --pink-6: #7a152b;
+  --pink-7: #95233a;
+  --pink-8: #c32d4c;
+  --pink-9: #f80255;
+  --pink-10: #e80049;
+  --pink-11: #ff8e9b;
+  --pink-12: #ffced2;
+
+  --pink-a1: #f1000008;
+  --pink-a2: #f23e3e11;
+  --pink-a3: #fc022b32;
+  --pink-a4: #ff002d4a;
+  --pink-a5: #fd003a5e;
+  --pink-a6: #fe1b4c71;
+  --pink-a7: #fe315a8e;
+  --pink-a8: #ff3760bf;
+  --pink-a9: #ff0257f8;
+  --pink-a10: #fe004ee7;
+  --pink-a11: #ff8e9b;
+  --pink-a12: #ffced2;
+
+  --pink-contrast: #fff;
+  --pink-surface: #2f171780;
+  --pink-indicator: #f80255;
+  --pink-track: #f80255;
+
+  --gray-1: #111;
+  --gray-2: #191919;
+  --gray-3: #232323;
+  --gray-4: #2a2a2a;
+  --gray-5: #313131;
+  --gray-6: #3a3a3a;
+  --gray-7: #484848;
+  --gray-8: #606060;
+  --gray-9: #6e6e6e;
+  --gray-10: #7c7c7c;
+  --gray-11: #b4b4b4;
+  --gray-12: #eee;
+
+  --gray-a1: #00000000;
+  --gray-a2: #ffffff09;
+  --gray-a3: #ffffff13;
+  --gray-a4: #ffffff1b;
+  --gray-a5: #ffffff22;
+  --gray-a6: #ffffff2c;
+  --gray-a7: #ffffff3b;
+  --gray-a8: #ffffff55;
+  --gray-a9: #ffffff64;
+  --gray-a10: #ffffff73;
+  --gray-a11: #ffffffaf;
+  --gray-a12: #ffffffed;
+
+  --gray-contrast: #ffffff;
+  --gray-surface: rgba(0, 0, 0, 0.05);
+  --gray-indicator: #6e6e6e;
+  --gray-track: #6e6e6e;
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  @media (gamut: p3) {
+    :root,
+    .light,
+    .light-theme {
+      --pink-1: oklch(98.4% 0.0042 14.77);
+      --pink-2: oklch(97.3% 0.0107 14.77);
+      --pink-3: oklch(94.2% 0.0283 14.77);
+      --pink-4: oklch(91.6% 0.0539 14.77);
+      --pink-5: oklch(88.4% 0.0699 14.77);
+      --pink-6: oklch(84.5% 0.0842 14.77);
+      --pink-7: oklch(79.6% 0.1016 14.77);
+      --pink-8: oklch(73.4% 0.1292 14.77);
+      --pink-9: oklch(62.3% 0.2485 14.77);
+      --pink-10: oklch(58.1% 0.2499 14.77);
+      --pink-11: oklch(53.5% 0.2485 14.77);
+      --pink-12: oklch(34.1% 0.1397 14.77);
+
+      --pink-a1: color(display-p3 0.9922 0.0118 0.0118 / 0.012);
+      --pink-a2: color(display-p3 0.8824 0.0118 0.1176 / 0.036);
+      --pink-a3: color(display-p3 0.9451 0.0078 0.0078 / 0.088);
+      --pink-a4: color(display-p3 0.8824 0.0039 0.0549 / 0.147);
+      --pink-a5: color(display-p3 0.8745 0.0039 0.0431 / 0.203);
+      --pink-a6: color(display-p3 0.8588 0.0039 0.0471 / 0.266);
+      --pink-a7: color(display-p3 0.7961 0.0039 0.051 / 0.346);
+      --pink-a8: color(display-p3 0.7569 0.0039 0.0627 / 0.453);
+      --pink-a9: color(display-p3 0.8706 0 0.1922 / 0.802);
+      --pink-a10: color(display-p3 0.8039 0 0.149 / 0.818);
+      --pink-a11: color(display-p3 0.7098 0 0.1294 / 0.842);
+      --pink-a12: color(display-p3 0.3569 0 0.0745 / 0.937);
+
+      --pink-contrast: #fff;
+      --pink-surface: color(display-p3 0.9922 0.9529 0.9529 / 0.8);
+      --pink-indicator: oklch(62.3% 0.2485 14.77);
+      --pink-track: oklch(62.3% 0.2485 14.77);
+
+      --gray-1: oklch(98.2% 0.0015 277.7);
+      --gray-2: oklch(97.2% 0.003 277.7);
+      --gray-3: oklch(94.5% 0.0045 277.7);
+      --gray-4: oklch(92% 0.0061 277.7);
+      --gray-5: oklch(89.8% 0.0077 277.7);
+      --gray-6: oklch(87.4% 0.0093 277.7);
+      --gray-7: oklch(84% 0.0117 277.7);
+      --gray-8: oklch(77.9% 0.016 277.7);
+      --gray-9: oklch(63.1% 0.0165 277.7);
+      --gray-10: oklch(59.5% 0.0161 277.7);
+      --gray-11: oklch(48.9% 0.0139 277.7);
+      --gray-12: oklch(24.1% 0.0099 277.7);
+
+      --gray-a1: color(display-p3 0.0118 0.0118 0.3373 / 0.012);
+      --gray-a2: color(display-p3 0.0118 0.149 0.4314 / 0.028);
+      --gray-a3: color(display-p3 0.0118 0.0118 0.2549 / 0.064);
+      --gray-a4: color(display-p3 0.0078 0.0471 0.2039 / 0.1);
+      --gray-a5: color(display-p3 0.0039 0.0314 0.1882 / 0.127);
+      --gray-a6: color(display-p3 0.0039 0.0275 0.1765 / 0.159);
+      --gray-a7: color(display-p3 0.0039 0.0431 0.1765 / 0.207);
+      --gray-a8: color(display-p3 0.0039 0.0314 0.1804 / 0.286);
+      --gray-a9: color(display-p3 0.0039 0.0196 0.102 / 0.465);
+      --gray-a10: color(display-p3 0 0.0157 0.0941 / 0.508);
+      --gray-a11: color(display-p3 0 0.0078 0.0588 / 0.627);
+      --gray-a12: color(display-p3 0 0.0039 0.0275 / 0.881);
+
+      --gray-contrast: #ffffff;
+      --gray-surface: color(display-p3 1 1 1 / 80%);
+      --gray-indicator: oklch(63.1% 0.0165 277.7);
+      --gray-track: oklch(63.1% 0.0165 277.7);
+    }
+
+    .dark,
+    .dark-theme {
+      --pink-1: oklch(17.8% 0.0174 14.77);
+      --pink-2: oklch(20.6% 0.0203 14.77);
+      --pink-3: oklch(25.3% 0.0767 14.77);
+      --pink-4: oklch(29.2% 0.1132 14.77);
+      --pink-5: oklch(33.2% 0.1271 14.77);
+      --pink-6: oklch(38.2% 0.1338 14.77);
+      --pink-7: oklch(44.8% 0.1485 14.77);
+      --pink-8: oklch(54.4% 0.1852 14.77);
+      --pink-9: oklch(62.3% 0.2485 14.77);
+      --pink-10: oklch(58.1% 0.2485 14.77);
+      --pink-11: oklch(78.6% 0.2053 14.77);
+      --pink-12: oklch(90.5% 0.0671 14.77);
+
+      --pink-a1: color(display-p3 0.9608 0 0 / 0.022);
+      --pink-a2: color(display-p3 0.9961 0.2824 0.2824 / 0.055);
+      --pink-a3: color(display-p3 0.9961 0.0902 0.2039 / 0.173);
+      --pink-a4: color(display-p3 0.9961 0.0078 0.2039 / 0.257);
+      --pink-a5: color(display-p3 1 0.0941 0.2706 / 0.328);
+      --pink-a6: color(display-p3 1 0.2039 0.3412 / 0.4);
+      --pink-a7: color(display-p3 1 0.2863 0.4039 / 0.505);
+      --pink-a8: color(display-p3 1 0.3098 0.4196 / 0.681);
+      --pink-a9: color(display-p3 1 0.2118 0.3843 / 0.887);
+      --pink-a10: color(display-p3 1 0.2039 0.3529 / 0.824);
+      --pink-a11: color(display-p3 1 0.6157 0.6549 / 0.937);
+      --pink-a12: color(display-p3 0.9961 0.8392 0.851 / 0.967);
+
+      --pink-contrast: #fff;
+      --pink-surface: color(display-p3 0.1647 0.0863 0.0941 / 0.5);
+      --pink-indicator: oklch(62.3% 0.2485 14.77);
+      --pink-track: oklch(62.3% 0.2485 14.77);
+
+      --gray-1: oklch(17.8% 0 none);
+      --gray-2: oklch(21.4% 0 none);
+      --gray-3: oklch(25.4% 0 none);
+      --gray-4: oklch(28.4% 0 none);
+      --gray-5: oklch(31.3% 0 none);
+      --gray-6: oklch(34.9% 0 none);
+      --gray-7: oklch(40.2% 0 none);
+      --gray-8: oklch(48.9% 0 none);
+      --gray-9: oklch(53.9% 0 none);
+      --gray-10: oklch(58.5% 0 none);
+      --gray-11: oklch(77% 0 none);
+      --gray-12: oklch(94.9% 0 none);
+
+      --gray-a1: color(display-p3 0 0 0 / 0);
+      --gray-a2: color(display-p3 1 1 1 / 0.0336);
+      --gray-a3: color(display-p3 1 1 1 / 0.0756);
+      --gray-a4: color(display-p3 1 1 1 / 0.105);
+      --gray-a5: color(display-p3 1 1 1 / 0.1345);
+      --gray-a6: color(display-p3 1 1 1 / 0.1723);
+      --gray-a7: color(display-p3 1 1 1 / 0.2311);
+      --gray-a8: color(display-p3 1 1 1 / 0.3319);
+      --gray-a9: color(display-p3 1 1 1 / 0.3908);
+      --gray-a10: color(display-p3 1 1 1 / 0.4496);
+      --gray-a11: color(display-p3 1 1 1 / 0.6849);
+      --gray-a12: color(display-p3 1 1 1 / 0.9286);
+
+      --gray-contrast: #ffffff;
+      --gray-surface: color(display-p3 0 0 0 / 5%);
+      --gray-indicator: oklch(53.9% 0 none);
+      --gray-track: oklch(53.9% 0 none);
+    }
   }
 }
 
 @layer base {
   body {
-    /* overflow-y: hidden; */
-    background: var(--neutral-50);
-    color: var(--neutral-900);
+    background: var(--gray-1);
+    color: var(--gray-12);
   }
 
   ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
   }
 
-  /* ::-webkit-scrollbar-track {
-    background: #373737;
+  ::-webkit-scrollbar-track {
+    background: var(--gray-6);
     border-radius: 0px;
   }
 
   ::-webkit-scrollbar-thumb {
     border-radius: 0px;
+    background: var(--pink-9);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-icon;
+    background: var(--pink-9);
   }
 
   ::-webkit-scrollbar-thumb:active {
-    @apply bg-icon;
-  } */
+    background: var(--pink-10);
+  }
 }

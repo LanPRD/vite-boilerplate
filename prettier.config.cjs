@@ -1,5 +1,6 @@
-const prettierConfig = require("@prdev-solutions/eslint-config/prettier.cjs");
+const { reactPrettier } = require("@prdev-solutions/eslint-config/prettier.cjs");
 
 module.exports = {
-  ...prettierConfig
+  ...reactPrettier,
+  experimentalTernaries: true
 };

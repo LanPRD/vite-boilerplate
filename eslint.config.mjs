@@ -7,5 +7,6 @@ export default [
     rules: {
       "@typescript-eslint/no-require-imports": ["off"]
     }
-  }
+  },
+  { complexity: ["error", 7] }
 ];
