@@ -1,17 +1,17 @@
 import { apiCall } from "./api";
 
-export function getLootBox(props?: any) {
+export function getRequest(props?: any) {
   return apiCall<any>({
     method: "GET",
-    url: "/loot/all",
+    url: "/get-endpoint",
     params: { layout: props?.layout }
   });
 }
 
-export function openLootBox(props: any) {
+export function postRequest(props: any) {
   return apiCall<any>({
     method: "POST",
-    url: `/loot/open/${props.network}/${props.slug}`,
+    url: "/post-endpoint",
     data: { ...props },
     headers: { Authorization: `Bearer ${props.access_token}` }
   });

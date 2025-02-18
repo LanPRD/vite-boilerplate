@@ -37,36 +37,36 @@
   --color-gray-indicator: var(--gray-indicator);
   --color-gray-track: var(--gray-track);
 
-  --color-amaranth-1: var(--pink-1);
-  --color-amaranth-2: var(--pink-2);
-  --color-amaranth-3: var(--pink-3);
-  --color-amaranth-4: var(--pink-4);
-  --color-amaranth-5: var(--pink-5);
-  --color-amaranth-6: var(--pink-6);
-  --color-amaranth-7: var(--pink-7);
-  --color-amaranth-8: var(--pink-8);
-  --color-amaranth-9: var(--pink-9);
-  --color-amaranth-10: var(--pink-10);
-  --color-amaranth-11: var(--pink-11);
-  --color-amaranth-12: var(--pink-12);
+  --color-accent-1: var(--red-1);
+  --color-accent-2: var(--red-2);
+  --color-accent-3: var(--red-3);
+  --color-accent-4: var(--red-4);
+  --color-accent-5: var(--red-5);
+  --color-accent-6: var(--red-6);
+  --color-accent-7: var(--red-7);
+  --color-accent-8: var(--red-8);
+  --color-accent-9: var(--red-9);
+  --color-accent-10: var(--red-10);
+  --color-accent-11: var(--red-11);
+  --color-accent-12: var(--red-12);
 
-  --color-amaranth-a1: var(--pink-a1);
-  --color-amaranth-a2: var(--pink-a2);
-  --color-amaranth-a3: var(--pink-a3);
-  --color-amaranth-a4: var(--pink-a4);
-  --color-amaranth-a5: var(--pink-a5);
-  --color-amaranth-a6: var(--pink-a6);
-  --color-amaranth-a7: var(--pink-a7);
-  --color-amaranth-a8: var(--pink-a8);
-  --color-amaranth-a9: var(--pink-a9);
-  --color-amaranth-a10: var(--pink-a10);
-  --color-amaranth-a11: var(--pink-a11);
-  --color-amaranth-a12: var(--pink-a12);
+  --color-accent-a1: var(--red-a1);
+  --color-accent-a2: var(--red-a2);
+  --color-accent-a3: var(--red-a3);
+  --color-accent-a4: var(--red-a4);
+  --color-accent-a5: var(--red-a5);
+  --color-accent-a6: var(--red-a6);
+  --color-accent-a7: var(--red-a7);
+  --color-accent-a8: var(--red-a8);
+  --color-accent-a9: var(--red-a9);
+  --color-accent-a10: var(--red-a10);
+  --color-accent-a11: var(--red-a11);
+  --color-accent-a12: var(--red-a12);
 
-  --color-amaranth-contrast: var(--pink-contrast);
-  --color-amaranth-surface: var(--pink-surface);
-  --color-amaranth-indicator: var(--pink-indicator);
-  --color-amaranth-track: var(--pink-track);
+  --color-accent-contrast: var(--red-contrast);
+  --color-accent-surface: var(--red-surface);
+  --color-accent-indicator: var(--red-indicator);
+  --color-accent-track: var(--red-track);
 
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
@@ -98,36 +98,36 @@
 :root,
 .light,
 .light-theme {
-  --pink-1: #fdf9f9;
-  --pink-2: #fdf3f4;
-  --pink-3: #ffe5e6;
-  --pink-4: #ffd5d8;
-  --pink-5: #ffc7ca;
-  --pink-6: #feb6bb;
-  --pink-7: #f7a1a8;
-  --pink-8: #ef858f;
-  --pink-9: #f80255;
-  --pink-10: #e90049;
-  --pink-11: #d10040;
-  --pink-12: #6f0020;
+  --red-1: #fcf9f9;
+  --red-2: #fcf4f4;
+  --red-3: #fce6e6;
+  --red-4: #ffd7d8;
+  --red-5: #ffc9ca;
+  --red-6: #f9b9bb;
+  --red-7: #f1a5a8;
+  --red-8: #e88a90;
+  --red-9: #f6405f;
+  --red-10: #e82e53;
+  --red-11: #cc003f;
+  --red-12: #690f21;
 
-  --pink-a1: #fff3f355;
-  --pink-a2: #ffe1e455;
-  --pink-a3: #ffe5e6;
-  --pink-a4: #ffd5d8;
-  --pink-a5: #ffc7ca;
-  --pink-a6: #ff939baa;
-  --pink-a7: #ef03165d;
-  --pink-a8: #e1021779;
-  --pink-a9: #f80054fd;
-  --pink-a10: #e90049;
-  --pink-a11: #d10040;
-  --pink-a12: #6f0020;
+  --red-a1: #fc3d3d04;
+  --red-a2: #fc1a1a09;
+  --red-a3: #fc090917;
+  --red-a4: #ffd7d8;
+  --red-a5: #ffc9ca;
+  --red-a6: #f1010944;
+  --red-a7: #dd030c59;
+  --red-a8: #d1020f74;
+  --red-a9: #f4022bbf;
+  --red-a10: #e4012ed1;
+  --red-a11: #cc003f;
+  --red-a12: #600013f0;
 
-  --pink-contrast: #fff;
-  --pink-surface: #fef1f3cc;
-  --pink-indicator: #f80255;
-  --pink-track: #f80255;
+  --red-contrast: #fff;
+  --red-surface: #fdf3f3cc;
+  --red-indicator: #f6405f;
+  --red-track: #f6405f;
 
   --gray-1: #f9f9fa;
   --gray-2: #f5f6f8;
@@ -163,36 +163,36 @@
 
 .dark,
 .dark-theme {
-  --pink-1: #180e0f;
-  --pink-2: #201414;
-  --pink-3: #3f0e16;
-  --pink-4: #560319;
-  --pink-5: #680620;
-  --pink-6: #7a152b;
-  --pink-7: #95233a;
-  --pink-8: #c32d4c;
-  --pink-9: #f80255;
-  --pink-10: #e80049;
-  --pink-11: #ff8e9b;
-  --pink-12: #ffced2;
+  --red-1: #170e0f;
+  --red-2: #1f1414;
+  --red-3: #3c1217;
+  --red-4: #520d19;
+  --red-5: #631321;
+  --red-6: #75202c;
+  --red-7: #8f2e3b;
+  --red-8: #bb3c4e;
+  --red-9: #f6405f;
+  --red-10: #e72f53;
+  --red-11: #ff8e97;
+  --red-12: #ffd1d2;
 
-  --pink-a1: #f1000008;
-  --pink-a2: #f23e3e11;
-  --pink-a3: #fc022b32;
-  --pink-a4: #ff002d4a;
-  --pink-a5: #fd003a5e;
-  --pink-a6: #fe1b4c71;
-  --pink-a7: #fe315a8e;
-  --pink-a8: #ff3760bf;
-  --pink-a9: #ff0257f8;
-  --pink-a10: #fe004ee7;
-  --pink-a11: #ff8e9b;
-  --pink-a12: #ffced2;
+  --red-a1: #ec000007;
+  --red-a2: #ff44440f;
+  --red-a3: #fb17322f;
+  --red-a4: #fe032f46;
+  --red-a5: #ff174058;
+  --red-a6: #fd35516c;
+  --red-a7: #ff486187;
+  --red-a8: #fe4d66b7;
+  --red-a9: #fe4161f6;
+  --red-a10: #fe325ae6;
+  --red-a11: #ff8e97;
+  --red-a12: #ffd1d2;
 
-  --pink-contrast: #fff;
-  --pink-surface: #2f171780;
-  --pink-indicator: #f80255;
-  --pink-track: #f80255;
+  --red-contrast: #fff;
+  --red-surface: #2d171780;
+  --red-indicator: #f6405f;
+  --red-track: #f6405f;
 
   --gray-1: #111;
   --gray-2: #191919;
@@ -231,36 +231,36 @@
     :root,
     .light,
     .light-theme {
-      --pink-1: oklch(98.4% 0.0042 14.77);
-      --pink-2: oklch(97.3% 0.0107 14.77);
-      --pink-3: oklch(94.2% 0.0283 14.77);
-      --pink-4: oklch(91.6% 0.0539 14.77);
-      --pink-5: oklch(88.4% 0.0699 14.77);
-      --pink-6: oklch(84.5% 0.0842 14.77);
-      --pink-7: oklch(79.6% 0.1016 14.77);
-      --pink-8: oklch(73.4% 0.1292 14.77);
-      --pink-9: oklch(62.3% 0.2485 14.77);
-      --pink-10: oklch(58.1% 0.2499 14.77);
-      --pink-11: oklch(53.5% 0.2485 14.77);
-      --pink-12: oklch(34.1% 0.1397 14.77);
+      --red-1: oklch(98.4% 0.0036 16.45);
+      --red-2: oklch(97.3% 0.0093 16.45);
+      --red-3: oklch(94.3% 0.0245 16.45);
+      --red-4: oklch(91.6% 0.0478 16.45);
+      --red-5: oklch(88.4% 0.0621 16.45);
+      --red-6: oklch(84.5% 0.0747 16.45);
+      --red-7: oklch(79.6% 0.09 16.45);
+      --red-8: oklch(73.4% 0.1144 16.45);
+      --red-9: oklch(64.9% 0.2164 16.45);
+      --red-10: oklch(60.9% 0.2177 16.45);
+      --red-11: oklch(53.6% 0.2164 16.45);
+      --red-12: oklch(34.1% 0.1218 16.45);
 
-      --pink-a1: color(display-p3 0.9922 0.0118 0.0118 / 0.012);
-      --pink-a2: color(display-p3 0.8824 0.0118 0.1176 / 0.036);
-      --pink-a3: color(display-p3 0.9451 0.0078 0.0078 / 0.088);
-      --pink-a4: color(display-p3 0.8824 0.0039 0.0549 / 0.147);
-      --pink-a5: color(display-p3 0.8745 0.0039 0.0431 / 0.203);
-      --pink-a6: color(display-p3 0.8588 0.0039 0.0471 / 0.266);
-      --pink-a7: color(display-p3 0.7961 0.0039 0.051 / 0.346);
-      --pink-a8: color(display-p3 0.7569 0.0039 0.0627 / 0.453);
-      --pink-a9: color(display-p3 0.8706 0 0.1922 / 0.802);
-      --pink-a10: color(display-p3 0.8039 0 0.149 / 0.818);
-      --pink-a11: color(display-p3 0.7098 0 0.1294 / 0.842);
-      --pink-a12: color(display-p3 0.3569 0 0.0745 / 0.937);
+      --red-a1: color(display-p3 0.6627 0.0118 0.0118 / 0.012);
+      --red-a2: color(display-p3 0.8667 0.0118 0.0118 / 0.032);
+      --red-a3: color(display-p3 0.8118 0.0549 0.0078 / 0.088);
+      --red-a4: color(display-p3 0.9098 0.0039 0.0314 / 0.143);
+      --red-a5: color(display-p3 0.8902 0.0039 0.0039 / 0.195);
+      --red-a6: color(display-p3 0.7882 0.0039 0.0039 / 0.254);
+      --red-a7: color(display-p3 0.7333 0.0039 0.0157 / 0.334);
+      --red-a8: color(display-p3 0.6941 0.0039 0.0392 / 0.437);
+      --red-a9: color(display-p3 0.8431 0 0.1098 / 0.683);
+      --red-a10: color(display-p3 0.7804 0 0.1176 / 0.743);
+      --red-a11: color(display-p3 0.6863 0 0.1294 / 0.846);
+      --red-a12: color(display-p3 0.3137 0 0.0471 / 0.905);
 
-      --pink-contrast: #fff;
-      --pink-surface: color(display-p3 0.9922 0.9529 0.9529 / 0.8);
-      --pink-indicator: oklch(62.3% 0.2485 14.77);
-      --pink-track: oklch(62.3% 0.2485 14.77);
+      --red-contrast: #fff;
+      --red-surface: color(display-p3 0.9843 0.9529 0.9529 / 0.8);
+      --red-indicator: oklch(64.9% 0.2164 16.45);
+      --red-track: oklch(64.9% 0.2164 16.45);
 
       --gray-1: oklch(98.2% 0.0015 277.7);
       --gray-2: oklch(97.2% 0.003 277.7);
@@ -296,36 +296,36 @@
 
     .dark,
     .dark-theme {
-      --pink-1: oklch(17.8% 0.0174 14.77);
-      --pink-2: oklch(20.6% 0.0203 14.77);
-      --pink-3: oklch(25.3% 0.0767 14.77);
-      --pink-4: oklch(29.2% 0.1132 14.77);
-      --pink-5: oklch(33.2% 0.1271 14.77);
-      --pink-6: oklch(38.2% 0.1338 14.77);
-      --pink-7: oklch(44.8% 0.1485 14.77);
-      --pink-8: oklch(54.4% 0.1852 14.77);
-      --pink-9: oklch(62.3% 0.2485 14.77);
-      --pink-10: oklch(58.1% 0.2485 14.77);
-      --pink-11: oklch(78.6% 0.2053 14.77);
-      --pink-12: oklch(90.5% 0.0671 14.77);
+      --orange-1: oklch(17.8% 0.0096 67.1);
+      --orange-2: oklch(20.9% 0.0149 67.1);
+      --orange-3: oklch(25.6% 0.0343 67.1);
+      --orange-4: oklch(29.1% 0.0588 67.1);
+      --orange-5: oklch(33.1% 0.0673 67.1);
+      --orange-6: oklch(38.1% 0.0706 67.1);
+      --orange-7: oklch(44.5% 0.078 67.1);
+      --orange-8: oklch(53% 0.096 67.1);
+      --orange-9: oklch(80.6% 0.1316 67.1);
+      --orange-10: oklch(77.3% 0.1316 67.1);
+      --orange-11: oklch(79.9% 0.1316 67.1);
+      --orange-12: oklch(92.2% 0.0469 67.1);
 
-      --pink-a1: color(display-p3 0.9608 0 0 / 0.022);
-      --pink-a2: color(display-p3 0.9961 0.2824 0.2824 / 0.055);
-      --pink-a3: color(display-p3 0.9961 0.0902 0.2039 / 0.173);
-      --pink-a4: color(display-p3 0.9961 0.0078 0.2039 / 0.257);
-      --pink-a5: color(display-p3 1 0.0941 0.2706 / 0.328);
-      --pink-a6: color(display-p3 1 0.2039 0.3412 / 0.4);
-      --pink-a7: color(display-p3 1 0.2863 0.4039 / 0.505);
-      --pink-a8: color(display-p3 1 0.3098 0.4196 / 0.681);
-      --pink-a9: color(display-p3 1 0.2118 0.3843 / 0.887);
-      --pink-a10: color(display-p3 1 0.2039 0.3529 / 0.824);
-      --pink-a11: color(display-p3 1 0.6157 0.6549 / 0.937);
-      --pink-a12: color(display-p3 0.9961 0.8392 0.851 / 0.967);
+      --orange-a1: color(display-p3 0.9412 0 0 / 0.009);
+      --orange-a2: color(display-p3 0.9882 0.5686 0.1529 / 0.047);
+      --orange-a3: color(display-p3 0.9961 0.6196 0.102 / 0.114);
+      --orange-a4: color(display-p3 1 0.5333 0 / 0.177);
+      --orange-a5: color(display-p3 1 0.5765 0.051 / 0.232);
+      --orange-a6: color(display-p3 1 0.6353 0.2039 / 0.29);
+      --orange-a7: color(display-p3 0.9961 0.6863 0.2941 / 0.379);
+      --orange-a8: color(display-p3 1 0.698 0.3176 / 0.505);
+      --orange-a9: color(display-p3 1 0.7451 0.4392 / 0.925);
+      --orange-a10: color(display-p3 1 0.7333 0.4157 / 0.879);
+      --orange-a11: color(display-p3 1 0.749 0.4392 / 0.912);
+      --orange-a12: color(display-p3 0.9961 0.9137 0.8118 / 0.963);
 
-      --pink-contrast: #fff;
-      --pink-surface: color(display-p3 0.1647 0.0863 0.0941 / 0.5);
-      --pink-indicator: oklch(62.3% 0.2485 14.77);
-      --pink-track: oklch(62.3% 0.2485 14.77);
+      --orange-contrast: #2e1e0b;
+      --orange-surface: color(display-p3 0.149 0.1098 0.0706 / 0.5);
+      --orange-indicator: oklch(80.6% 0.1316 67.1);
+      --orange-track: oklch(80.6% 0.1316 67.1);
 
       --gray-1: oklch(17.8% 0 none);
       --gray-2: oklch(21.4% 0 none);
@@ -379,14 +379,14 @@
 
   ::-webkit-scrollbar-thumb {
     border-radius: 0px;
-    background: var(--pink-9);
+    background: var(--red-9);
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--pink-9);
+    background: var(--red-9);
   }
 
   ::-webkit-scrollbar-thumb:active {
-    background: var(--pink-10);
+    background: var(--red-10);
   }
 }

@@ -1,7 +1,8 @@
 import { Button } from "@/components/custom-buttons";
-import { Input } from "@/components/custom-input";
+import { CustomInput } from "@/components/custom-input";
+import { CustomLabel } from "@/components/custom-label";
 import { useTheme } from "@/context/theme-provider";
-import { Label } from "@radix-ui/react-label";
+import { PiMagnifyingGlassBold, PiUserFill } from "react-icons/pi";
 
 export function Home() {
   const { toggleTheme } = useTheme();
@@ -25,30 +26,44 @@ export function Home() {
 
         <div className="flex gap-2 flex-col">
           <div className="w-full">
-            <Label htmlFor="file1">File input</Label>
-            <Input type="file" id="file1" />
+            <CustomLabel htmlFor="input-1">File</CustomLabel>
+
+            <CustomInput.Root>
+              <CustomInput.Input id="input-1" type="file" />
+            </CustomInput.Root>
           </div>
 
           <div className="w-full">
-            <Label htmlFor="file2">File input disabled</Label>
-            <Input type="file" disabled id="file2" />
+            <CustomLabel htmlFor="input-2">File disabled</CustomLabel>
+
+            <CustomInput.Root>
+              <CustomInput.Input id="input-2" disabled type="file" />
+            </CustomInput.Root>
           </div>
 
           <div className="w-full">
-            <Label htmlFor="file3">File text disabled</Label>
-            <Input type="text" placeholder="placeholder..." id="file3" />
+            <CustomLabel htmlFor="input-3">Input</CustomLabel>
+
+            <CustomInput.Root>
+              <CustomInput.Input id="input-3" placeholder="placeholder..." />
+              <CustomInput.Icon Icon={PiMagnifyingGlassBold} />
+            </CustomInput.Root>
           </div>
 
           <div className="w-full">
-            <Label htmlFor="file4">File text disabled</Label>
-            <Input type="text" placeholder="placeholder..." disabled id="file4" />
+            <CustomLabel htmlFor="input-4">Input disabled</CustomLabel>
+
+            <CustomInput.Root>
+              <CustomInput.Icon Icon={PiUserFill} />
+              <CustomInput.Input disabled id="input-4" placeholder="placeholder..." />
+            </CustomInput.Root>
           </div>
         </div>
 
         <table className="table-fixed border-separate border-spacing-3">
           <thead>
             <tr>
-              <th></th>
+              <th>&nbsp;</th>
               <th>Default</th>
               <th>Secondary</th>
               <th>Outline</th>
