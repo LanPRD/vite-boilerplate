@@ -1,3 +1,5 @@
+import { AspectRatio } from "@/components/aspect-ratio";
+import { CustomCard } from "@/components/card";
 import { Button } from "@/components/custom-buttons";
 import { CustomInput } from "@/components/custom-input";
 import { CustomLabel } from "@/components/custom-label";
@@ -8,7 +10,7 @@ export function Home() {
   const { toggleTheme } = useTheme();
 
   return (
-    <main className="flex items-center justify-center flex-col min-h-screen">
+    <main className="flex items-center justify-center flex-col min-h-screen py-10">
       <title>Home | Vite Boilerplate</title>
       <meta name="description" content="Custom description for this page. New feature of React v19." />
 
@@ -151,6 +153,45 @@ export function Home() {
             </tr>
           </tbody>
         </table>
+
+        <div className="flex gap-2">
+          <CustomCard.Root className="w-96">
+            <CustomCard.Header>
+              <CustomCard.Title>Card Header</CustomCard.Title>
+              <CustomCard.Description>Card Description</CustomCard.Description>
+            </CustomCard.Header>
+
+            <CustomCard.Content>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel libero id felis placerat faucibus.
+                Nulla facilisi. Sed facilisis, lectus vel facilisis eleifend, justo ligula vestibulum urna, ac ultricies
+                neque purus nec neque. Donec vel velit vel arcu tristique consectetur.
+              </p>
+            </CustomCard.Content>
+
+            <CustomCard.Footer>Card Footer</CustomCard.Footer>
+          </CustomCard.Root>
+
+          <CustomCard.Root className="w-96 overflow-hidden">
+            <CustomCard.Content className="px-0">
+              <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-t-md">
+                <img
+                  src="https://images.unsplash.com/photo-1739862836703-03eca4457f77?q=80&w=1636&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                  className="h-fit w-fit object-cover"
+                />
+              </AspectRatio>
+            </CustomCard.Content>
+
+            <CustomCard.Footer>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel libero id felis placerat faucibus.
+                Nulla facilisi. Sed facilisis, lectus vel facilisis eleifend, justo ligula vestibulum urna, ac ultricies
+                neque purus nec neque. Donec vel velit vel arcu tristique consectetur.
+              </p>
+            </CustomCard.Footer>
+          </CustomCard.Root>
+        </div>
       </div>
     </main>
   );
