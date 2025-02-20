@@ -28,7 +28,9 @@
 
 ## 📄 Documentação
 
-Este boilerplate vem com uma série de bibliotecas e configurações pré-definidas para ajudá-lo a começar seu projeto React rapidamente. Ele inclui suporte a tema claro e escuro, componentes básicos, metadatas predefinidas, layout padrão, providers, stores e configuração de rotas.
+Este boilerplate vem com uma série de bibliotecas e configurações pré-definidas para ajudá-lo a começar seu projeto
+React rapidamente. Ele inclui suporte a tema claro e escuro, componentes básicos, metadatas predefinidas, layout padrão,
+providers, stores e configuração de rotas.
 
 ### Tecnologias Utilizadas
 
@@ -39,7 +41,6 @@ Principais bibliotecas utilizadas para criar o boilerplate.
 - **Zustand**: Para gerenciamento de estado.
 - **Zod**: Para validação de dados.
 - **Axios**: Para requisições HTTP.
-- **React Helmet Async**: Para gerenciamento de metadatas no React.
 - **React Hook Form**: Para gerenciamento de formulários.
 - **Tanstack React Query**: Para gerenciamento de dados assíncronos.
 - **Clsx**: Para manipulação condicional de classes.
@@ -95,11 +96,13 @@ Siga os passos abaixo para começar a usar o boilerplate:
 
 ## 🛠️ Como Usar
 
-Este boilerplate já está pré-configurado com as bibliotecas e configurações mencionadas acima. Basta seguir os exemplos e utilizar as ferramentas conforme necessário.
+Este boilerplate já está pré-configurado com as bibliotecas e configurações mencionadas acima. Basta seguir os exemplos
+e utilizar as ferramentas conforme necessário.
 
 ### Exemplo de Uso
 
-Você pode começar a construir suas páginas e componentes utilizando os exemplos fornecidos no projeto. A estrutura básica de layout, temas e rotas já está pronta para uso. Confira os arquivos na pasta `src` para começar.
+Você pode começar a construir suas páginas e componentes utilizando os exemplos fornecidos no projeto. A estrutura
+básica de layout, temas e rotas já está pronta para uso. Confira os arquivos na pasta `src` para começar.
 
 <br />
 
