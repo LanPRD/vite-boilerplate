@@ -1,5 +1,5 @@
 import { cn } from "@/lib/css";
-import React from "react";
+import * as React from "react";
 import type { IconType } from "react-icons";
 
 type InputProps = React.ComponentProps<"input">;
