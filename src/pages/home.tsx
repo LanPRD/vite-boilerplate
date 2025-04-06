@@ -1,7 +1,7 @@
 import { AspectRatio } from "@/components/aspect-ratio";
-import { CustomCard } from "@/components/card";
+import { CardContent, CardDescription, CardFooter, CardHeader, CardRoot, CardTitle } from "@/components/card";
 import { Button } from "@/components/custom-buttons";
-import { CustomInput } from "@/components/custom-input";
+import { Input, InputIcon, InputRoot } from "@/components/custom-input";
 import { CustomLabel } from "@/components/custom-label";
 import { useTheme } from "@/context/theme-provider";
 import { PiMagnifyingGlassBold, PiUserFill } from "react-icons/pi";
@@ -30,35 +30,35 @@ export function Home() {
           <div className="w-full">
             <CustomLabel htmlFor="input-1">File</CustomLabel>
 
-            <CustomInput.Root>
-              <CustomInput.Input id="input-1" type="file" />
-            </CustomInput.Root>
+            <InputRoot>
+              <Input id="input-1" type="file" />
+            </InputRoot>
           </div>
 
           <div className="w-full">
             <CustomLabel htmlFor="input-2">File disabled</CustomLabel>
 
-            <CustomInput.Root>
-              <CustomInput.Input id="input-2" disabled type="file" />
-            </CustomInput.Root>
+            <InputRoot>
+              <Input id="input-2" disabled type="file" />
+            </InputRoot>
           </div>
 
           <div className="w-full">
             <CustomLabel htmlFor="input-3">Input</CustomLabel>
 
-            <CustomInput.Root>
-              <CustomInput.Input id="input-3" placeholder="placeholder..." />
-              <CustomInput.Icon Icon={PiMagnifyingGlassBold} />
-            </CustomInput.Root>
+            <InputRoot>
+              <Input id="input-3" placeholder="placeholder..." />
+              <InputIcon Icon={PiMagnifyingGlassBold} />
+            </InputRoot>
           </div>
 
           <div className="w-full">
             <CustomLabel htmlFor="input-4">Input disabled</CustomLabel>
 
-            <CustomInput.Root>
-              <CustomInput.Icon Icon={PiUserFill} />
-              <CustomInput.Input disabled id="input-4" placeholder="placeholder..." />
-            </CustomInput.Root>
+            <InputRoot>
+              <InputIcon Icon={PiUserFill} />
+              <Input disabled id="input-4" placeholder="placeholder..." />
+            </InputRoot>
           </div>
         </div>
 
@@ -155,25 +155,25 @@ export function Home() {
         </table>
 
         <div className="flex gap-2">
-          <CustomCard.Root className="w-96">
-            <CustomCard.Header>
-              <CustomCard.Title>Card Header</CustomCard.Title>
-              <CustomCard.Description>Card Description</CustomCard.Description>
-            </CustomCard.Header>
+          <CardRoot className="w-96">
+            <CardHeader>
+              <CardTitle>Card Header</CardTitle>
+              <CardDescription>Card Description</CardDescription>
+            </CardHeader>
 
-            <CustomCard.Content>
+            <CardContent>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel libero id felis placerat faucibus.
                 Nulla facilisi. Sed facilisis, lectus vel facilisis eleifend, justo ligula vestibulum urna, ac ultricies
                 neque purus nec neque. Donec vel velit vel arcu tristique consectetur.
               </p>
-            </CustomCard.Content>
+            </CardContent>
 
-            <CustomCard.Footer>Card Footer</CustomCard.Footer>
-          </CustomCard.Root>
+            <CardFooter>Card Footer</CardFooter>
+          </CardRoot>
 
-          <CustomCard.Root className="w-96 overflow-hidden">
-            <CustomCard.Content className="px-0">
+          <CardRoot className="w-96 overflow-hidden">
+            <CardContent className="px-0">
               <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-t-md">
                 <img
                   src="https://images.unsplash.com/photo-1739862836703-03eca4457f77?q=80&w=1636&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -181,16 +181,16 @@ export function Home() {
                   className="h-fit w-fit object-cover"
                 />
               </AspectRatio>
-            </CustomCard.Content>
+            </CardContent>
 
-            <CustomCard.Footer>
+            <CardFooter>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel libero id felis placerat faucibus.
                 Nulla facilisi. Sed facilisis, lectus vel facilisis eleifend, justo ligula vestibulum urna, ac ultricies
                 neque purus nec neque. Donec vel velit vel arcu tristique consectetur.
               </p>
-            </CustomCard.Footer>
-          </CustomCard.Root>
+            </CardFooter>
+          </CardRoot>
         </div>
       </div>
     </main>

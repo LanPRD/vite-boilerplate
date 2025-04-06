@@ -9,16 +9,16 @@ type InputIcon = {
 };
 type InputContainer = React.ComponentProps<"div">;
 
-function Icon({ Icon, iconProps }: InputIcon) {
+export function InputIcon({ Icon, iconProps }: InputIcon) {
   return (
     <div className="self-center">
       <Icon {...iconProps} />
     </div>
   );
 }
-Icon.displayName = "Icon";
+InputIcon.displayName = "Icon";
 
-function Input({ className, type, ...props }: InputProps) {
+export function Input({ className, type, ...props }: InputProps) {
   return (
     <input
       type={type}
@@ -33,7 +33,7 @@ function Input({ className, type, ...props }: InputProps) {
 }
 Input.displayName = "Input";
 
-function Container({ children, ...props }: InputContainer) {
+export function InputRoot({ children, ...props }: InputContainer) {
   const isDisabled = React.Children.toArray(children).some(
     child => React.isValidElement(child) && (child as React.ReactElement<{ disabled?: boolean }>).props.disabled
   );
@@ -58,9 +58,3 @@ function Container({ children, ...props }: InputContainer) {
     </div>
   );
 }
-
-export const CustomInput = {
-  Root: Container,
-  Icon: Icon,
-  Input: Input
-};

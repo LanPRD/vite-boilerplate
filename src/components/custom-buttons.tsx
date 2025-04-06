@@ -39,7 +39,7 @@ export interface ButtonProps extends React.ComponentProps<"button">, VariantProp
   asChild?: boolean;
 }
 
-const Button = ({ className, variant, size, isLoading = false, asChild = false, ...props }: ButtonProps) => {
+export const Button = ({ className, variant, size, isLoading = false, asChild = false, ...props }: ButtonProps) => {
   const Comp = asChild ? Slot : "button";
   const styles = cn(buttonVariants({ variant, size, className }), isLoading && "cursor-not-allowed");
 
@@ -51,5 +51,3 @@ const Button = ({ className, variant, size, isLoading = false, asChild = false, 
   );
 };
 Button.displayName = "Button";
-
-export { Button, buttonVariants };

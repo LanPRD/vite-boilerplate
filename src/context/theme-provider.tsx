@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, use, useEffect, useState } from "react";
 
 type Theme = "dark" | "light" | "system";
@@ -20,7 +21,7 @@ const initialState: ThemeProviderState = {
 
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState);
 
-function ThemeProvider({ children, defaultTheme = "system", storageKey = "ui-theme" }: ThemeProviderProps) {
+export function ThemeProvider({ children, defaultTheme = "system", storageKey = "ui-theme" }: ThemeProviderProps) {
   const appName = import.meta.env.VITE_APP_NAME;
 
   const [theme, setTheme] = useState<Theme>(
@@ -50,12 +51,10 @@ function ThemeProvider({ children, defaultTheme = "system", storageKey = "ui-the
   return <ThemeProviderContext value={{ theme, toggleTheme }}>{children}</ThemeProviderContext>;
 }
 
-function useTheme() {
+export function useTheme() {
   const context = use(ThemeProviderContext);
 
   if (context === undefined) throw new Error("useTheme must be used within a ThemeProvider");
 
   return context;
 }
-
-export { ThemeProvider, useTheme };

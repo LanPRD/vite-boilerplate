@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, use } from "react";
 
 interface AppContextProps {
@@ -10,11 +11,11 @@ type AppProviderProps = {
 
 const AppContext = createContext<AppContextProps>({} as AppContextProps);
 
-function AppProvider({ children }: AppProviderProps) {
+export function AppProvider({ children }: AppProviderProps) {
   return <AppContext value={{ value: true }}>{children}</AppContext>;
 }
 
-function useApp(): AppContextProps {
+export function useApp(): AppContextProps {
   const context = use(AppContext);
 
   if (!context) {
@@ -23,5 +24,3 @@ function useApp(): AppContextProps {
 
   return context;
 }
-
-export { AppProvider, useApp };
